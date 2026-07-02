@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Billing System</title>
+    <link rel="stylesheet" href="canteen_project.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR START ===================== -->
+
+    <header class="navbar">
+
+        <div class="nav-left">
+
+            <img src="media/chatGPT 1 logo.png" class="nav-logo">
+
+            <div class="nav-title">
+
+                <h2>Dhanveer Canteen Billing System</h2>
+
+                <p>Fast • Secure • Reliable Billing</p>
+
+            </div>
+
+        </div>
+
+        <div class="nav-right">
+
+            <a href="#">Home</a>
+
+            <a href="#">Billing</a>
+
+            <a href="#">Payment</a>
+
+            <a href="#">About</a>
+
+            <a href="#">Contact</a>
+
+            <button id="theme-toggle">🌙 Dark</button>
+
+            <button id="loginBtn">🔐 Sign In</button>
+
+        </div>
+
+    </header>
+    <!-- ===================== LOGIN POPUP START ===================== -->
+
+    <div id="loginPopup" class="login-popup">
+
+        <div class="login-box">
+
+            <span class="close">&times;</span>
+
+            <img src="media/chatGPT 1 logo.png" class="login-logo">
+
+            <h2>Sign In</h2>
+
+            <input type="text" id="username" placeholder="Username">
+
+            <input type="password" id="password" placeholder="Password">
+
+            <button id="loginSubmit">Login</button>
+        </div>
+
+    </div>
+
+    <!-- ===================== NAVBAR END ===================== -->
+    <br>
+    <div class="box1">
+        <div class="box">
+
+            <br>
+
+            <div class="logo2">
+                <img class="logo2-img" src="media/chatGPT 1 logo.png" alt="">
+                <h2>Customer Details</h2>
+                <div class="billNo">
+                    Bill No : <span id="billNo">1001</span>
+                </div>
+            </div>
+            <br>
+            <div class="name">
+                <div class="label1">
+                    <label for="customerName">Name:</label>
+                    <input class="details" type="text" id="customerName" placeholder="👤 Enter Customer Name">
+                </div>
+
+                <div class="label1">
+                    <label for="mobile">Contact:</label>
+                    <input class="details" type="text" id="mobile" placeholder="📞 Enter Mobile Number" maxlength="10"
+                        oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+
+                </div>
+            </div>
+
+            <div class="date">
+                <div class="label1">
+                    <label for="Date">Date:</label>
+                    <input class="details" type="text" id="Date" placeholder="🗓️ Enter Date">
+
+                </div>
+                <div class="label1">
+                    <label for="Time">Time:</label>
+                    <input class="details" type="text" id="Time" placeholder="⌚ Enter Time">
+
+                </div>
+            </div>
+
+            <div class="label1">
+                <label for="days">Day:</label>
+            </div>
+            <div class="day">
+                <select id="days">
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                </select>
+
+                <div class="label1" style="margin-top: -3.15%; margin-left:-3%;">
+                    <label for="add">Address:</label>
+                    <input id="add" type="text" placeholder="Address">
+                </div>
+            </div>
+            <br><br>
+            <div class="logo2" style="margin-top: 2%;">
+                <img class="logo2-img" src="media/chatGPT 1 logo.png" alt="">
+                <h2>Menu</h2>
+            </div>
+
+            <br><br>
+            <div class="options">
+                <select id="item">
+                    <option value="Tea-10">Tea - ₹10</option>
+                    <option value="Coffee-20">Coffee - ₹20</option>
+                    <option value="Burger-60">Burger - ₹60</option>
+                    <option value="Pizza-120">Pizza - ₹120</option>
+                    <option value="Sandwich-50">Sandwich - ₹50</option>
+                    <option value="Cold Drink-40">Cold Drink - ₹40</option>
+                    <option value="Momos-70">Momos - ₹70</option>
+                    <option value="Pasta-90">Pasta - ₹90</option>
+                    <option value="Noodles-80">Noodles - ₹80</option>
+                    <option value="Fries-50">Fries - ₹50</option>
+                    <option value="Samosa-15">Samosa - ₹15</option>
+                    <option value="Kachori-20">Kachori - ₹20</option>
+                    <option value="Paneer Roll-70">Paneer Roll - ₹70</option>
+                    <option value="Veg Thali-120">Veg Thali - ₹120</option>
+                    <option value="Chole Bhature-90">Chole Bhature - ₹90</option>
+                    <option value="Ice Cream-40">Ice Cream - ₹40</option>
+                    <option value="Cake-60">Cake - ₹60</option>
+                    <option value="Juice-50">Juice - ₹50</option>
+                    <option value="Biryani-150">Biryani - ₹150</option>
+                    <option value="Water Bottle-20">Water Bottle - ₹20</option>
+                </select>
+
+                <input type="number" id="qty" placeholder="Enter Quantity 1 2 3.."
+                    style="background-color: rgb(252, 252, 243);;">
+            </div>
+
+            <button onclick="addItem()">Add Item</button>
+
+            <table id="billTable">
+
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+
+            </table>
+
+            <div class="total">
+                Grand Total: ₹ <span id="grandTotal">0</span>
+            </div>
+            <div class="bill">
+                <div class="dics-bill">
+                    <div class="discount">
+                        <input type="%" id="discount" placeholder="Enter Discount (%)">
+                    </div>
+                    <div class="disc-btn">
+                        <button class="addBtn" onclick="addDiscount()" style="width: 100%; ">Add Discount</button>
+                    </div>
+                </div>
+                <div class="billSummary">
+
+                    <p id="subTotal">Sub Total : ₹0</p>
+
+                    <p id="disc">Discount : ₹0</p>
+
+                    <p id="gst">GST (5%) : ₹0</p>
+
+                    <p id="finalTotal">Final Total : ₹0</p>
+
+                </div>
+            </div>
+            <button class="printBtn" onclick="printBill()">Print Bill</button>
+
+        </div>
+        <div class="box2">
+            <img class="box2-img" src="media/chatGPT 2.png" alt="image">
+            <div class="payment-card">
+
+                <h2>💳 Secure Payment</h2>
+
+                <p class="pay-text">Choose Your Payment Method</p>
+
+                <div class="payment-icons">
+
+                    <a href="upi://pay?pa=7906075981@ybl&pn=Dhanveer%20Kumar&cu=INR">
+                        <img src="media/phonePay.png" alt="PhonePe">
+                        <span>PhonePe</span>
+                    </a>
+
+                    <a href="upi://pay?pa=kdhanveer594@oksbi&pn=Dhanveer%20Kumar&cu=INR">
+                        <img src="media/gPay.png" alt="Google Pay">
+                        <span>Google Pay</span>
+                    </a>
+                    <img src="media/Dhanveer naviUPI.png" class="qrCode">
+
+                </div>
+
+                <hr>
+
+                <div class="payment-info">
+
+                    <p>🔒 100% Secure Payment</p>
+
+                    <p>💳 UPI / QR Payment Available</p>
+
+                    <p>⚡ Instant Payment Confirmation</p>
+
+                    <p>📱 PhonePe • Google Pay • Paytm</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <br>
+    <hr>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <h2>Canteen Billing System</h2>
+            <p class="tagline">Fast • Secure • Reliable</p>
+
+            <div class="footer-info">
+                <p>📍 <strong>Address:</strong> Tarakhas Faridpur Bareilly</p>
+                <p>☎ <strong>Phone:</strong> +91 79060 75981</p>
+                <p>✉ <strong>Email:</strong> kdhanveer594@gmail.com</p>
+            </div>
+
+            <hr>
+
+            <p class="copyright">
+                © 2026 Canteen Billing System. All Rights Reserved.
+            </p>
+
+        </div>
+    </footer>
+    <script src="canteen_project.js"></script>
+</body>
+
+
+</html>
