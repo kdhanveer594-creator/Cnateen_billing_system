@@ -128,7 +128,7 @@ th,td{
 </head>
 
 <body>
-<img src="media/chatGPT 1 logo.png" 
+<img src="logo.png" 
      style="width:80px; height:80px; display:block; margin:auto;">
 <h2>CANTEEN BILLING SYSTEM</h2>
 
