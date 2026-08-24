@@ -296,7 +296,16 @@ loginBtn.onclick = function () {
     loginPopup.style.display = "flex";
 }
 loginSubmit.onclick = function(){
-      alert("emter user name and password");
+      if(username === ""){
+          alert("Please Enter The User Name first");
+          return;
+      }
+    if(password === ""){
+        alert("Please Enter The Password");
+        return;
+    }
+    alert("Login Successfull");
+            
 }
 
 
