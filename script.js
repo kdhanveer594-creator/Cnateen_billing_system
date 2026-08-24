@@ -314,7 +314,7 @@ loginSubmit.onclick = function(){
     
     username.value = "";
     password.value = "";
-
+}
     // Popup close
     loginPopup.style.display = "none";
 };
