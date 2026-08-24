@@ -291,14 +291,15 @@ const loginPopup = document.getElementById("loginPopup");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginSubmit = document.getElementById("loginSubmit");
-const close = document.querySelector(".close");
+const closeBtn = document.getElementById("closeBtn");
+
 
 loginBtn.onclick = function () {
     loginPopup.style.display = "flex";
 }
-close.addEventListener("click",()=>{
-    close.style.display = "none";
-});
+closeBtn.onclick = function () {
+    closeBtn.style.display = "none";
+}
 loginSubmit.onclick = function(){
       if(username === ""){
           alert("Please Enter The User Name first");
