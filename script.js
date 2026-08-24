@@ -301,13 +301,13 @@ closeBtn.onclick = function () {
    loginPopup.style.display = "none";
 }
 loginSubmit.onclick = function(){
-      if(username === ""){
+      if(username.value === ""){
           alert("Please Enter The User Name first");
           return;
       }
-    if(password === ""){
+    if(password.value === ""){
         alert("Please Enter The Password");
-        return;
+        
     }
     alert("Login Successfull");
    
