@@ -291,13 +291,13 @@ const loginPopup = document.getElementById("loginPopup");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginSubmit = document.getElementById("loginSubmit");
-let closeBtn = document.getElementById("closeBtn");
+let loginCloseBtn = document.getElementById("logiCloseBtn");
 
 
 loginBtn.onclick = function () {
     loginPopup.style.display = "flex";
 }
-closeBtn.onclick = function () {
+loginCloseBtn.onclick = function () {
    loginPopup.style.display = "none";
 }
 
@@ -311,6 +311,10 @@ loginSubmit.onclick = function(){
         return;
     }
      alert("Login Has Been Successful");
+
+    // Inputs clear
+    username.value = "";
+    password.value = "";
     // Popup close
     loginPopup.style.display = "none";
 };
