@@ -291,7 +291,7 @@ const loginPopup = document.getElementById("loginPopup");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginSubmit = document.getElementById("loginSubmit");
-const closeBtn = document.getElementById("closeBtn");
+let closeBtn = document.getElementById("closeBtn");
 
 
 loginBtn.onclick = function () {
@@ -307,7 +307,7 @@ loginSubmit.onclick = function(){
       }
     if(password === ""){
         alert("Please Enter The Password");
-        
+        return;
     }
     alert("Login Successfull");
    
