@@ -302,12 +302,10 @@ closeBtn.onclick = function () {
 }
 
 loginSubmit.onclick = function(){
-    let userName = username.value;
-let passWord = password.value;
-      if(userName === ""){
+      if(username == ""){
           alert("Please Enter The User Name first");
           
-      }else if(passWord === ""){
+      }else if(password == ""){
         alert("Please Enter The Password");
     }else{
     alert("Login Has been Successfull");
