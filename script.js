@@ -289,7 +289,7 @@ const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginSubmit = document.getElementById("loginSubmit");
 
-let loginCloseBtn = document.getElementById("loginCloseBtn");
+let closeBtn = document.getElementById("closeBtn");
 
 
 loginBtn.onclick = function () {
@@ -297,7 +297,7 @@ loginBtn.onclick = function () {
 };
 
 
-loginCloseBtn.onclick = function () {
+closeBtn.onclick = function () {
     loginPopup.style.display = "none";
 };
 
