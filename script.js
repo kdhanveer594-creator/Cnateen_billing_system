@@ -286,33 +286,66 @@ function newBill() {
 
 
 
+// const loginBtn = document.getElementById("loginBtn");
+// const loginPopup = document.getElementById("loginPopup");
+// const username = document.getElementById("username");
+// const password = document.getElementById("password");
+// const loginSubmit = document.getElementById("loginSubmit");
+// let closeBtn = document.getElementById("closeBtn");
+
+
+// loginBtn.onclick = function () {
+//     loginPopup.style.display = "flex";
+// }
+// closeBtn.onclick = function () {
+//    loginPopup.style.display = "none";
+// }
+
+// loginSubmit.onclick = function(){
+//       if(username.value.trim() == ""){
+//           alert("Please Enter The User Name first");
+//           return;
+//       }
+//     if(password.value.trim() == ""){
+//         alert("Please Enter The Password");
+//         return;
+//     }
+//      alert("Login Has been Successfull");
+// }
+
 const loginBtn = document.getElementById("loginBtn");
 const loginPopup = document.getElementById("loginPopup");
+
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginSubmit = document.getElementById("loginSubmit");
-let closeBtn = document.getElementById("closeBtn");
+
+const loginCloseBtn = document.getElementById("loginCloseBtn");
 
 
 loginBtn.onclick = function () {
     loginPopup.style.display = "flex";
-}
-closeBtn.onclick = function () {
-   loginPopup.style.display = "none";
-}
+};
 
-loginSubmit.onclick = function(){
-      if(username.value.trim() == ""){
-          alert("Please Enter The User Name first");
-          return;
-      }
-    if(password.value.trim() == ""){
+
+loginCloseBtn.onclick = function () {
+    loginPopup.style.display = "none";
+};
+
+
+loginSubmit.onclick = function () {
+
+    if (username.value.trim() === "") {
+        alert("Please Enter The User Name First");
+        return;
+    }
+
+    if (password.value.trim() === "") {
         alert("Please Enter The Password");
         return;
     }
-     alert("Login Has been Successfull");
-}
 
-
+    alert("Login Has Been Successful");
+};
 
 
