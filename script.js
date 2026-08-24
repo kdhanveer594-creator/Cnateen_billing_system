@@ -310,8 +310,13 @@ loginSubmit.onclick = function(){
         alert("Please Enter The Password");
         return;
     }
-     alert("Login Has been Successfull");
-      loginPopup.style.display = "none";
+     alert("Login Has Been Successful");
+    // Inputs clear
+    username.value = "";
+    password.value = "";
+
+    // Popup close
+    loginPopup.style.display = "none";
     
     }
 };
