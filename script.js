@@ -298,7 +298,7 @@ loginBtn.onclick = function () {
 }
 close.addEventListener("click",()=>{
     close.style.display = "none";
-}
+});
 loginSubmit.onclick = function(){
       if(username === ""){
           alert("Please Enter The User Name first");
