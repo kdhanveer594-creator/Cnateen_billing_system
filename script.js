@@ -310,7 +310,10 @@ loginSubmit.onclick = function(){
         alert("Please Enter The Password");
         return;
     }
-    if(username === password){
+    // if(username === password){
      alert("Login Has been Successfull");
+    let pass = password = "" ;
+    let name = username = "" ;
+    
     }
 };
