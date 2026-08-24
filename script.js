@@ -298,10 +298,8 @@ loginBtn.onclick = function () {
 
 
 closeBtn.onclick = function () {
-    loginPopup.style.display = "none";
+    loginPopup.style.display = "flex";
 };
-
-
 loginSubmit.onclick = function () {
 
     if (username.value.trim() === "") {
@@ -316,10 +314,4 @@ loginSubmit.onclick = function () {
 
     alert("Login Has Been Successful");
 
-    // Inputs clear
-    username.value = "";
-    password.value = "";
-
-    // Popup close
-    loginPopup.style.display = "none";
 };
