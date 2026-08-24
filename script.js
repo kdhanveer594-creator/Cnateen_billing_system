@@ -291,7 +291,7 @@ const loginPopup = document.getElementById("loginPopup");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginSubmit = document.getElementById("loginSubmit");
-let loginCloseBtn = document.getElementById("logiCloseBtn");
+const loginCloseBtn = document.getElementById("logiCloseBtn");
 
 
 loginBtn.onclick = function () {
