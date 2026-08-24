@@ -291,20 +291,26 @@ const loginPopup = document.getElementById("loginPopup");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginSubmit = document.getElementById("loginSubmit");
+const closeBtn = document.getElementById("close");
 
 loginBtn.onclick = function () {
     loginPopup.style.display = "flex";
 }
+closeBtn.onclick = function () {
+    loginPopup.style.display = "none";
+}
 loginSubmit.onclick = function(){
-      if(username === ""){
+      if(username.value === ""){
           alert("Please Enter The User Name first");
           return;
       }
-    if(password === ""){
+    if(password.value === ""){
         alert("Please Enter The Password");
         return;
     }
     alert("Login Successfull");
+    const user = username.value = "";
+    const userPassword = password.value = "";
             
 }
 
