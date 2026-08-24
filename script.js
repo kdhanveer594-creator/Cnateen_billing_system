@@ -291,7 +291,7 @@ const loginPopup = document.getElementById("loginPopup");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginSubmit = document.getElementById("loginSubmit");
-const close = document.getElementById(".close");
+const close = document.querySelector(".close");
 
 loginBtn.onclick = function () {
     loginPopup.style.display = "flex";
