@@ -298,7 +298,7 @@ loginBtn.onclick = function () {
     loginPopup.style.display = "flex";
 }
 closeBtn.onclick = function () {
-    closeBtn.style.display = "none";
+   loginPopup.style.display = "none";
 }
 loginSubmit.onclick = function(){
       if(username === ""){
