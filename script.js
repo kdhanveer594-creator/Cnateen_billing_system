@@ -302,14 +302,15 @@ closeBtn.onclick = function () {
 }
 
 loginSubmit.onclick = function(){
-      if(username == ""){
+      if(username.value.trim() == ""){
           alert("Please Enter The User Name first");
-          
-      }else if(password == ""){
+          return;
+      }
+    if(password.value.trim() == ""){
         alert("Please Enter The Password");
-    }else{
-    alert("Login Has been Successfull");
-}
+        return;
+    }
+     alert("Login Has been Successfull");
 }
 
 
