@@ -289,7 +289,7 @@ const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginSubmit = document.getElementById("loginSubmit");
 
-const loginCloseBtn = document.getElementById("loginCloseBtn");
+let loginCloseBtn = document.getElementById("loginCloseBtn");
 
 
 loginBtn.onclick = function () {
