@@ -312,11 +312,11 @@ loginSubmit.onclick = function(){
     }
      alert("Login Has Been Successful");
     // Inputs clear
-    username.value = "";
-    password.value = "";
+    username.value = ""
+    password.value = ""
 
     // Popup close
     loginPopup.style.display = "none";
-    
+}
     
 };
