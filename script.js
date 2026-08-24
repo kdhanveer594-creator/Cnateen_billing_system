@@ -317,6 +317,6 @@ loginSubmit.onclick = function(){
 
     // Popup close
     loginPopup.style.display = "none";
-}
+};
     
 
