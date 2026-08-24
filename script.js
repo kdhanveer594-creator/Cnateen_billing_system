@@ -297,7 +297,7 @@ loginBtn.onclick = function () {
     loginPopup.style.display = "flex";
 }
 closeBtn.onclick = function () {
-    loginPopup.style.display = "none";
+    closeBtn.style.display = "none";
 }
 loginSubmit.onclick = function(){
       if(username.value === ""){
@@ -306,9 +306,9 @@ loginSubmit.onclick = function(){
       }
     if(password.value === ""){
         alert("Please Enter The Password");
-        return;
-    }
+       // return;
     alert("Login Successfull");
+    }
     const user = username.value = "";
     const userPassword = password.value = "";
             
