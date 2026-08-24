@@ -311,10 +311,6 @@ loginSubmit.onclick = function(){
         return;
     }
      alert("Login Has Been Successful");
-    
-    username.value = "";
-    password.value = "";
-}
     // Popup close
     loginPopup.style.display = "none";
 };
