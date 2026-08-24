@@ -291,7 +291,7 @@ const loginPopup = document.getElementById("loginPopup");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const loginSubmit = document.getElementById("loginSubmit");
-const close = document.getElementById("close");
+const close = document.getElementById(".close");
 
 loginBtn.onclick = function () {
     loginPopup.style.display = "flex";
@@ -300,11 +300,11 @@ close.addEventListener("click",()=>{
     close.style.display = "none";
 }
 loginSubmit.onclick = function(){
-      if(username.value === ""){
+      if(username === ""){
           alert("Please Enter The User Name first");
           return;
       }
-    if(password.value === ""){
+    if(password === ""){
         alert("Please Enter The Password");
         return;
     }
