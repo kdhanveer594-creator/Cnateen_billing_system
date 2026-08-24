@@ -311,7 +311,7 @@ loginSubmit.onclick = function(){
         return;
     }
      alert("Login Has Been Successful");
-    // Inputs clear
+    
     username.value = "";
     password.value = "";
 
