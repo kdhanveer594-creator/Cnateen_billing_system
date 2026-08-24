@@ -300,14 +300,16 @@ loginBtn.onclick = function () {
 closeBtn.onclick = function () {
    loginPopup.style.display = "none";
 }
+let userName = username.value;
+let passWord = password.value;
 loginSubmit.onclick = function(){
-      if(username.value === ""){
+      if(userName === ""){
           alert("Please Enter The User Name first");
           return;
       }
-    if(password.value === ""){
+    if(passWord === ""){
         alert("Please Enter The Password");
-        
+        return;
     }
     alert("Login Successfull");
    
