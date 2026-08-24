@@ -306,13 +306,12 @@ loginSubmit.onclick = function(){
 let passWord = password.value;
       if(userName === ""){
           alert("Please Enter The User Name first");
-          return;
-      }
-    if(passWord === ""){
+          
+      }else if(passWord === ""){
         alert("Please Enter The Password");
-        return;
-    }
-    alert("Login Successfull");
+    }else{
+    alert("Login Has been Successfull");
+}
 }
 
 
