@@ -307,7 +307,7 @@ loginSubmit.onclick = function(){
       }
     if(password === ""){
         alert("Please Enter The Password");
-        return;
+        
     }
     alert("Login Successfull");
    
