@@ -310,10 +310,10 @@ loginSubmit.onclick = function(){
     if(passWord === ""){
         alert("Please Enter The Password");
         return;
-    }
     alert("Login Successfull");
-   
+    }
 }
+
 
 
 
